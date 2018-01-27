@@ -1,0 +1,43 @@
+{
+  "name": "js-ipfs-swarm-key-gen",
+  "version": "1.0.0",
+  "description": "swarm.key file generator for IPFS Private Network feature",
+  "main": "generator.js",
+  "bin": {
+    "ipfs-swarm-key-gen": "cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vandeurenglenn/js-ipfs-swarm-key-gen.git"
+  },
+  "keywords": [
+    "ipfs",
+    "swarm",
+    "private",
+    "key",
+    "gen"
+  ],
+  "author": "Glenn Vandeuren <vandeurenglenn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vandeurenglenn/js-ipfs-swarm-key-gen/issues"
+  },
+  "homepage": "https://github.com/vandeurenglenn/js-ipfs-swarm-key-gen#readme",
+  "backed": {
+    "bundles": [
+      {
+        "src": "src/index.js",
+        "dest": "generator.js",
+        "format": "cjs"
+      }
+    ]
+  },
+  "dependencies": {
+    "crypto-io-fs": "^0.1.1",
+    "crypto-logger": "^0.1.0-alpha.7",
+    "randombytes": "^2.0.6"
+  }
+}
