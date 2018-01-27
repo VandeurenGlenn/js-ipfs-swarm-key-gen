@@ -31,8 +31,8 @@ cli-spinners@^1.0.0:
   resolved "https://registry.yarnpkg.com/cli-spinners/-/cli-spinners-1.1.0.tgz#f1847b168844d917a671eb9d147e3df497c90d06"
 
 crypto-io-fs@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/crypto-io-fs/-/crypto-io-fs-0.1.1.tgz#aa6e7a507b7a340deed166ca215641d41ac6d548"
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/crypto-io-fs/-/crypto-io-fs-0.1.2.tgz#fcfba3234729d9dcc7b0d118f5d671b11396895f"
 
 crypto-logger@^0.1.0-alpha.7:
   version "0.1.0-alpha.7"

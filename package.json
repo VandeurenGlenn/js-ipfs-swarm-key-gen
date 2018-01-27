@@ -1,6 +1,6 @@
 {
   "name": "js-ipfs-swarm-key-gen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "swarm.key file generator for IPFS Private Network feature",
   "main": "generator.js",
   "bin": {
