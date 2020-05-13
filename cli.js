@@ -1,4 +1,7 @@
 #!/usr/bin/env node
-const gen = require('./generator');
+const gen = require('./index');
 
-gen(process.argv[2]);
+(async () => {
+  const result = await gen(process.argv[2]);
+  console.log(`${result}`);
+})();
