@@ -18,9 +18,9 @@ var index = ((keyPath = path.join(os.homedir(), '.ipfs', 'swarm.key')) => new Pr
     cryptoLogger.fail(`searching for swarm.key in ${keyPath}`);
     cryptoLogger.info(`generating new swarm.key in ${keyPath}`);
     const bytes = randomBytes(32).toString('hex');
-    cryptoIoFs.write(keyPath, `/key/swarm/psk/1.0.0/
-  /base16/
-  ${bytes}`).then(() => cryptoLogger.succes(`saved swarm.key @${keyPath}`));
+    cryptoIoFs.write(keyPath, `/key/swarm/psk/1.0.0/\n`+
+  `/base16/\n`+
+  `${bytes}`).then(() => cryptoLogger.succes(`saved swarm.key @${keyPath}`));
   }
 }));
 
