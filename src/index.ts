@@ -1,20 +1,16 @@
 import randomBytes from 'randombytes';
-import { writeFile, readFile } from 'fs';
-import { promisify } from 'util';
+import { writeFile, readFile } from 'fs/promises';
 import { join } from 'path';
 import { homedir } from 'os';
 
-const write = promisify(writeFile)
-const read = promisify(readFile)
-
-export default async (path = join(homedir(), '.ipfs', 'swarm.key')) => {
+export default async (path: string = join(homedir(), '.ipfs', 'swarm.key')): Promise<{path: string, key: string}> => {
   let key;
   try {
-    key = await read(path)
+    key = await readFile(path)
   } catch (e) {
     const bytes = randomBytes(32).toString('hex')
     key = `/key/swarm/psk/1.0.0/\n/base16/\n${bytes}`
-    await write(path, key)
+    await writeFile(path, key)
   }
 
   return { path, key: key.toString() }
